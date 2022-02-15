@@ -1,9 +1,11 @@
 const notes = require('express').Router();
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
+const { v4: uuidv4 } = require('uuid');
+const db = require('../db/db.json');
 
-notes.get('/', (req, res) =>
+notes.get('/', (req, res) =>{
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-);
+});
 
 notes.post('/', (req, res) => {
   const { title, text } = req.body;
@@ -11,6 +13,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, './db/db.json');
@@ -25,5 +28,11 @@ notes.post('/', (req, res) => {
     res.json('Error in saving note.');
   }
 });
+
+notes.delete('/:id',(req,res)=>{
+   const { id } = req.params;
+   let entrys = db.filter(entry=> entry.id !== id)
+   writeToFile('./db/db.json',entrys)
+})
 
 module.exports = notes;
