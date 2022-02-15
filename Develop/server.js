@@ -21,7 +21,7 @@ app.get('/notes', (req, res) =>
 );
 
 app.get('*', (req, res) =>
-  res.send('Error page not found')
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 app.listen(PORT, () =>

@@ -3,6 +3,7 @@ const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils
 const { v4: uuidv4 } = require('uuid');
 const db = require('../db/db.json');
 
+
 notes.get('/', (req, res) =>{
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 });
@@ -31,8 +32,11 @@ notes.post('/', (req, res) => {
 
 notes.delete('/:id',(req,res)=>{
    const { id } = req.params;
-   let entrys = db.filter(entry=> entry.id !== id)
+   let entrys;
+   entrys = db.filter(entry=> entry.id !== id)
+   console.log(entrys)
    writeToFile('./db/db.json',entrys)
+   
 })
 
 module.exports = notes;
