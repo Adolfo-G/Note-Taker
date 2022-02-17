@@ -1,8 +1,7 @@
 const notes = require('express').Router();
 const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
-const db = require('../db/db.json');
-
+const fs = require('fs');
 
 notes.get('/', (req, res) =>{
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
@@ -31,12 +30,9 @@ notes.post('/', (req, res) => {
 });
 
 notes.delete('/:id',(req,res)=>{
-   const { id } = req.params;
-   let entrys;
-   entrys = db.filter(entry=> entry.id !== id)
-   console.log(entrys)
-   writeToFile('./db/db.json',entrys)
-   
-})
+   fs.readFile('./db/db.json','utf8',(err,data)=>{
+    writeToFile('./db/db.json',JSON.parse(data).filter(entry=> entry.id !== req.params.id))
+   });
+});
 
 module.exports = notes;
