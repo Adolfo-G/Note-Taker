@@ -33,6 +33,7 @@ notes.delete('/:id',(req,res)=>{
    fs.readFile('./db/db.json','utf8',(err,data)=>{
     writeToFile('./db/db.json',JSON.parse(data).filter(entry=> entry.id !== req.params.id))
    });
+   res.send(console.log("db.json file re-written"))
 });
 
 module.exports = notes;
