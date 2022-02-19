@@ -25,5 +25,5 @@ app.get('*', (req, res) =>
 );
 
 app.listen(PORT, () =>
-  console.log(`App live at http://localhost:${PORT}`)
+  console.log(`App live at ${PORT}`)
 );
