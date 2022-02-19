@@ -2,10 +2,9 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "Develop/server.js",
+  "main": "Develop/public/assets/js/index.js",
   "scripts": {
-    "start":"node Develop/server.js",
-    "build":"node Develop/public/assets/js/index.js"
+    "start":"node Develop/server.js"
   },
   "author": "",
   "license": "ISC",
