@@ -18,7 +18,7 @@
 
   ## Usage
     To use simply enter the note title and description and then press the save icon that appears. 
-    To delete press the ren icon next to the note you want to delete. 
+    To delete press the red icon next to the note you want to delete. 
  
   ## Questions
     -For any questions or concerns please reach out to me at
