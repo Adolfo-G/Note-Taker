@@ -5,6 +5,8 @@
     This application serves to provide a space to write and save notes.
     Using express and node.js this application is able to take in user input and serve up the correct responses. 
     This application was then published on heroku. Link to deployed applicatio in 'Installation'. 
+  ![](images/11-express-homework-demo-01.png)
+  ![](images/11-express-homework-demo-02.png)
     
   ## Table of Contents
   * [Installation](#installation)
