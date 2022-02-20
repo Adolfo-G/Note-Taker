@@ -2,7 +2,7 @@
   
   # Note Taker
   ## Description
-    This application server to provide a space to write and save notes.
+    This application serves to provide a space to write and save notes.
     Using express and node.js this application is able to take in user input and serve up the correct responses. 
     This application was then published on heroku. Link to deployed applicatio in 'Installation'. 
     
