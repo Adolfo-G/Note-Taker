@@ -2,7 +2,9 @@
   
   # Note Taker
   ## Description
-    This application server to provide a space to write and save notes. Using express and node.js this application is able to take in user input and serve up the correct responses. This application was then published on heroku. Link to deployed applicatio in 'Installation'. 
+    This application server to provide a space to write and save notes.
+    Using express and node.js this application is able to take in user input and serve up the correct responses. 
+    This application was then published on heroku. Link to deployed applicatio in 'Installation'. 
     
   ## Table of Contents
   * [Installation](#installation)
@@ -13,7 +15,8 @@
     To get started using this application you can view the deployed site here: https://note-taker-1029.herokuapp.com/notes
 
   ## Usage
-    To use simply enter the note title and description and then press the save icon that appears. To delete press the ren icon next to the note you want to delete. 
+    To use simply enter the note title and description and then press the save icon that appears. 
+    To delete press the ren icon next to the note you want to delete. 
  
   ## Questions
     -For any questions or concerns please reach out to me at
