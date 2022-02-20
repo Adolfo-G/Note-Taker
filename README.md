@@ -14,7 +14,7 @@
   * [Questions](#questions)
 
   ## Installation
-  To get started using this application you can view the deployed site here: https://note-taker-1029.herokuapp.com/notes
+  To get started using this application you can view the deployed site here: https://note-taker-1029.herokuapp.com/
 
   ## Usage
     To use simply enter the note title and description and then press the save icon that appears. 
